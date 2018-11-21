@@ -57,7 +57,13 @@
         </ul>
     </div>
     <div class="dashboard_right">
-      
+      <div style="text-align: center" class="alert alert-success" ng-show="sucess2">
+    {{transactionId}} 
+  </div>
+  <div style="text-align: center" class="alert alert-danger" ng-show="fialuier3">
+      Invoice generation faied
+     </div>
+
     <div  >
     <div style="text-align: center" class="alert alert-success" ng-show="sucess1">
         <span ng-bind="transactionId"></span> 
@@ -87,17 +93,8 @@
 <div class="submit_block"></div>
 <input type="submit" value="SUBMIT" ng-click="generate()">
 </div>
-<div  ng-show="Search1">
-<div style="text-align: center" class="alert alert-success" ng-show="sucess2">
-    {{transactionId}} 
-  </div>
-  <div style="text-align: center" class="alert alert-danger" ng-show="fialuier3">
-      Invoice generation faied
-     </div>
-<div class="col-md-4">
-<label>Invoice ID</label>
-<input type="text" ng-model="invoiceId">
-</div>
+
+
 
 <div class="clearfix"></div>
 
