@@ -61,7 +61,7 @@ for (i = 0; i < acc.length; i++) {
   
   $scope.onload=function(){
     
-    $http.get("http://ec2-35-173-231-185.compute-1.amazonaws.com:3000/api/newBatch"+myservice.xxx)
+    $http.get("http://ec2-35-173-231-185.compute-1.amazonaws.com:3000/api/newBatch")
     .then(function(response) {
       var datetime = new Date();
       var date1 = new Date(datetime);
