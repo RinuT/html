@@ -99,8 +99,8 @@ for (i = 0; i < acc.length; i++) {
  $scope.generateInvoice = function(id,batch,mc,q){
   $scope.search=true
   myservice.po=id
-  myservice.batch=batch
-   myservice.mc=mc
+  myservice.batch=mc
+   myservice.mc=batch
    myservice.quantity=q
  }
  
@@ -168,10 +168,8 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
     $scope.perUnitPrice
     $scope.materialCode=myservice.mc
     $scope.quantity= myservice.quantity
-    $scope.loading=false
   }
    $scope.generate=function(){
-     $scope.loading=true
     var requestInfo = Request();
     var request=
     {
@@ -186,7 +184,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
         "poNumber": myservice.po,
         "batch": {
           "$class": "com.cts.ipm.p2pNetwork.newBatch",
-          "batchCode": myservice.batch,
+          "batchCode": " ",
           "batch": {
             "$class": "com.cts.ipm.p2pNetwork.batch",
             "shipmentDate": "",
