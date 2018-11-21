@@ -168,8 +168,10 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
     $scope.perUnitPrice
     $scope.materialCode=myservice.mc
     $scope.quantity= myservice.quantity
+    $scope.loading=false
   }
    $scope.generate=function(){
+     $scope.loading=true
     var requestInfo = Request();
     var request=
     {
