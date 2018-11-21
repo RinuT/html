@@ -198,6 +198,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
             "availableQuantity": "",
             "batchStatus": "",
             "poNumber": "",
+            "materialCode": "",
             "invoice": []
           }
         },
@@ -245,6 +246,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
                   "availableQuantity": "",
                   "batchStatus": "",
                   "poNumber": "",
+                  "materialCode": "",
                   "invoice": []
                 }
               },
