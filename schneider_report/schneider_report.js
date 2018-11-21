@@ -9,38 +9,12 @@ app.config(['$routeProvider', function($routeProvider) {
   });
 }])
 app.controller('schneider_reportCtrl', ['$scope','myservice','$http','$timeout',function ($scope,myservice,$http,$timeout) {
-  $scope.POData=[];
-  $scope.notGenerated=[];
-  $scope.PODataGenerated=[];
-  $scope.PODataPaid=[];
-  $scope.poData={}
+    $scope.poData={}
   $scope.poData.materialCode=" "
     $scope.poData.quantity=" "
     $scope.poData.date=" "
     $scope.poData.transactionType=" "
-  $scope.val="1"
-  $scope.Search=false
-  $scope.Search1=false
-  $scope.fialuier2=false
-  $scope.fialuier=false
-  $scope.fialuier1=false
-  $scope.BatchId=""
-  $scope.PONumber=""
-  $scope.LineNo=" "
-  $scope.price=" "
-  $scope.SEmaterialCode=" "
-  $scope.POQty=" "
-  $scope.UOP=" "
-  $scope.DeliveryDate=" "
- $scope.Currency=" "
- $scope.deliveryNoteNo=" "
- $scope.shippmentDate=" "
- $scope.shippedQty=" "
- $scope.Unpaid=false
- $scope.notGen=false
- $scope.paid=false
- $scope.display=true
- $scope.Pending=false
+    $scope.poData.poNumber
   $scope.PODataPending=[]
   $scope.loading=true
   $scope.id=""
