@@ -125,7 +125,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
   $scope.noData=false
     $scope.Search=false
     $scope.Search1=false
-    $scope.fialuier2=false
+    $scope.fialuier3=false
     $scope.fialuier=false
     $scope.fialuier1=false
     $scope.BatchId=""
@@ -213,6 +213,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
            }, function errorCallback(response){
                console.log("POST-ing of data failed");
                $scope.loading=false
+    $scope.fialuier3=false
            });
    }
     
