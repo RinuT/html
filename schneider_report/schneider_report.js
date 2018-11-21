@@ -65,7 +65,7 @@ app.controller('schneider_reportCtrl', ['$scope','myservice','$http','$timeout',
   .then(function(response) {
      $scope.res = response.data;
      for(var n=0;n<$scope.res.length;n++){
-       for(var j=0;j<$scope.res.report.length;j++){
+       for(var j=0;j<$scope.res[n].report.length;j++){
         $scope.poData.poNumber=$scope.res[n].report[j].poNumber
         $scope.poData.materialCode=$scope.res[n].report[j].materialCode
         $scope.poData.quantity=$scope.res[n].report[j].quantity
