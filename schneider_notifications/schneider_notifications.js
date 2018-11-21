@@ -72,11 +72,11 @@ for (i = 0; i < acc.length; i++) {
         var timeDiff = Math.abs(date2.getTime() - date1.getTime());
         var diffDays = Math.ceil(timeDiff / (1000 * 3600* 24)); 
         if(diffDays>90 & $scope.res[n].batch.availableQuantity>0){
-          $scope.poData['batch']=$scope.res[n].batch.batchCode
-          $scope.poData['poNumber']=$scope.res[n].batch.batch.poNumber
-          $scope.poData['materialCode']=$scope.res[n].batch.batch.materialCode
-          $scope.poData['quantity']=$scope.res[n].batch.batch.availableQuantity
-          $scope.poData['amount']=$scope.res[n].batch.batch.amount
+          $scope.poData['batch']=$scope.res[n].batchCode
+          $scope.poData['poNumber']=$scope.res[n].batch.poNumber
+          $scope.poData['materialCode']=$scope.res[n].batch.materialCode
+          $scope.poData['quantity']=$scope.res[n].batch.availableQuantity
+          $scope.poData['amount']=$scope.res[n].batch.amount
           $scope.PODataUnpaid.push($scope.poData)
           $scope.poData={}
           $scope.Pending=true
