@@ -63,6 +63,7 @@ for (i = 0; i < acc.length; i++) {
     
     $http.get("http://ec2-35-173-231-185.compute-1.amazonaws.com:3000/api/newBatch")
     .then(function(response) {
+      $scope.res=response.data
       var datetime = new Date();
       var date1 = new Date(datetime);
       for( var n=0;n<$scope.res.length;n++){
@@ -90,6 +91,7 @@ for (i = 0; i < acc.length; i++) {
         
     }, function(response) {
       $scope.content = "Something went wrong";
+      $scope.loading=false
   });
   }
  $scope.generateInvoice = function(id){
