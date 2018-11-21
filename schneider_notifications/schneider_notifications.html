@@ -71,7 +71,7 @@
         <table>
           
             <tr ng-repeat="x in PODataUnpaid">
-              <td>PO No. : <a href="#"><span>{{x.poNumber}}</span> </a> Material Code : <a href="#"><span >{{x.materialCode}}</span>  Batch Id:  <span >{{x.batch}}</span>   </a>  Available Quantity <a href="#"><span>{{x.quantity}}</span></a><a href="/index.html#!/schneider_notification_success" ng-click="generateInvoice(x.poNumber,,x.materialCode,x.batch)"><img src="images/arrow.png"></a>  </td>
+              <td>PO No. : <a href="#"><span>{{x.poNumber}}</span> </a> Material Code : <a href="#"><span >{{x.materialCode}}</span>  Batch Id:  <span >{{x.batch}}</span>   </a>  Available Quantity <a href="#"><span>{{x.quantity}}</span></a><a href="/index.html#!/schneider_notification_success" ng-click="generateInvoice(x.poNumber,x.materialCode,x.batch)"><img src="images/arrow.png"></a>  </td>
                 </tr>
                
 </table>
@@ -79,27 +79,7 @@
               No Data to dispaly
           </div>
         </div>
-          <div  ng-show="search">
-               <div class="dashboard_drk_right">
-              <h3> Shippment Data</h3>
-              <div style="text-align: center" class="alert alert-success" ng-show="sucess2">
-                  {{transactionId}} 
-                </div>
-                <div style="text-align: center" class="alert alert-danger" ng-show="fialuier3">
-                    Invoice generation faied
-                   </div>
-          <div class="col-md-4">
-            <label>Invoice ID</label>
-            <input type="text" ng-model="invoiceId">
-          </div>
-          
-              <div class="clearfix"></div>
-            <div class="submit_block"></div>
-            
-            <input type="submit" value="SUBMIT" ng-click="generate()">
-          </div>
-        </div>
-       
+    
         <div class="clearfix"></div>
 </div>
             
