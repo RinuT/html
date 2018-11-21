@@ -71,7 +71,7 @@
         <table>
           
             <tr ng-repeat="x in PODataUnpaid">
-              <td>PO No. : <a href="#"><span>{{x.poNumber}}</span> </a> Material Code : <a href="#"><span >{{x.materialCode}}</span>  Batch Id:  <span >{{x.batch}}</span>   </a>  Available Quantity <a href="#"><span>{{x.quantity}}</span></a><a href="/index.html#!/schneider_notification_success" ng-click="generateInvoice(x.invoiceDoc,x.batch)"><img src="images/arrow.png"></a>  </td>
+              <td>PO No. : <a href="#"><span>{{x.poNumber}}</span> </a> Material Code : <a href="#"><span >{{x.materialCode}}</span>  Batch Id:  <span >{{x.batch}}</span>   </a>  Available Quantity <a href="#"><span>{{x.quantity}}</span></a><a href="/index.html#!/schneider_notification_success" ng-click="generateInvoice(x.poNumber,,x.materialCode,x.batch)"><img src="images/arrow.png"></a>  </td>
                 </tr>
                
 </table>
