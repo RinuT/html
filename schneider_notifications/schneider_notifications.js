@@ -96,10 +96,11 @@ for (i = 0; i < acc.length; i++) {
       $scope.loading=false
   });
   }
- $scope.generateInvoice = function(id,batch){
+ $scope.generateInvoice = function(id,batch,mc){
   $scope.search=true
-  myservice.xxx=id
+  myservice.po=id
   myservice.batch=batch
+   myservice.mc=mc
  }
  
  $scope.navigate=function(url){
@@ -180,14 +181,14 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
       var request=
       {
         "$class": "com.cts.ipm.p2pNetwork.generateInvoice",
-        "invDocNum": myservice.xxx+"0",
+        "invDocNum": "1"+myservice.batch+"0",
         "selfinvoice": {
           "$class": "com.cts.ipm.p2pNetwork.SelfInvoice",
           "consumptionQuantity": "",
           "invoiceStatus": "",
           "amount": "",
-          "materialCode": "",
-          "poNumber": "",
+          "materialCode": myservice.mc,
+          "poNumber": myservice.po,
           "batch": {
             "$class": "com.cts.ipm.p2pNetwork.newBatch",
             "batchCode": " ",
@@ -204,7 +205,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
           },
           "invDocNum": " "
         },
-        "batchCode": myservice.xxx
+        "batchCode": myservice.batch
       }
     var res = $http.post('http://ec2-35-173-231-185.compute-1.amazonaws.com:3000/api/generateInvoice',request).then(function successCallback(response){
                  $scope.update_response=response;
@@ -262,6 +263,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
   
         
     app.service('myservice', function() {
-      this.xxx = "yyy";
+      this.mc = "";
+      this.po = "";
       this.batch=""
     });
