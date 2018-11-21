@@ -102,6 +102,7 @@ for (i = 0; i < acc.length; i++) {
   myservice.batch=mc
    myservice.mc=batch
    myservice.quantity=q
+  
  }
  
  $scope.navigate=function(url){
@@ -139,6 +140,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
    $scope.deliveryNoteNo=" "
    $scope.shippmentDate=" "
    $scope.shippedQty=" "
+  $scope.success=false
    $scope.Unpaid=false
    $scope.notGen=false
    $scope.paid=false
@@ -168,8 +170,10 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
     $scope.perUnitPrice
     $scope.materialCode=myservice.mc
     $scope.quantity= myservice.quantity
+     $scope.loading=false
   }
    $scope.generate=function(){
+      $scope.loading=true
     var requestInfo = Request();
     var request=
     {
@@ -203,7 +207,8 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
   var res = $http.post('http://ec2-35-173-231-185.compute-1.amazonaws.com:3000/api/generateInvoice',request).then(function successCallback(response){
                $scope.update_response=response;
                $scope.transactionId=$scope.update_response.data.transactionId
-              
+               $scope.loading=false
+              $scope.success=true
                
            }, function errorCallback(response){
                console.log("POST-ing of data failed");
