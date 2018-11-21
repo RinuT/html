@@ -64,6 +64,7 @@ angular.module('myApp.schneider_purchaseOrder_search', ['ngRoute'])
           $scope.dateC = new Date($scope.POCreationDate); 
           $scope.dateD = new Date($scope.DeliveryDate);
           $scope.Currency=$scope.res.purchaseorder.currency
+    $scope.Supplier="flextronics"
           $scope.loading=false
         $scope.loading=false
        
