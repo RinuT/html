@@ -186,7 +186,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
         "poNumber": myservice.po,
         "batch": {
           "$class": "com.cts.ipm.p2pNetwork.newBatch",
-          "batchCode": " ",
+          "batchCode": myservice.batch,
           "batch": {
             "$class": "com.cts.ipm.p2pNetwork.batch",
             "shipmentDate": "",
