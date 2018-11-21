@@ -203,7 +203,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
               "invoice": []
             }
           },
-          "invDocNum": "1"+myservice.batch+"0",
+          "invDocNum": "1"+myservice.batch+"0"
         },
         "batchCode": myservice.batch
       }
