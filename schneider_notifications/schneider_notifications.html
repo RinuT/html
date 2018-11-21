@@ -56,6 +56,9 @@
       </ul>
   </div>
   <div class="dashboard_right">
+    <div style="text-align: center" class="alert alert-danger" ng-show="noData">
+            No report generated
+           </div>
       <div class="loader" ng-show="loading" ></div>
       <div style="text-align: center" class="alert alert-success" ng-show="sucess2">
           {{transactionId}} 
