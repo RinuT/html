@@ -117,7 +117,7 @@ app.controller('schneider_paymentCtrl', ['$scope','myservice','$http','$timeout'
     $scope.loading=false
 
     $scope.onloadS=function(){
-      $scope.loading=true
+      
      
        
       $http.get("http://ec2-35-173-231-185.compute-1.amazonaws.com:3000/api/SelfInvoice/"+myservice.xxx)
