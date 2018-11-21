@@ -52,6 +52,7 @@ app.controller('flextronics-purchase-orderCtrl', ['$scope','myservice','$http','
   }, function(response) {
     $scope.failuer=true
     $scope.content = "Something went wrong";
+    $scope.loading=false
 });
              
         
@@ -107,6 +108,7 @@ app.controller('flextronics-purchase-orderCtrl', ['$scope','myservice','$http','
   }, function(response) {
     $scope.failuer1=true
     $scope.content = "Something went wrong";
+    $scope.loading=false
 });
         
           
