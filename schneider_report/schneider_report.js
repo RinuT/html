@@ -38,7 +38,7 @@ app.controller('schneider_reportCtrl', ['$scope','myservice','$http','$timeout',
   $http.get("http://ec2-35-173-231-185.compute-1.amazonaws.com:3000/api/Material")
   .then(function(response) {
      $scope.res = response.data;
-     for(var n=0;n<$scope.res[n].length;n++){
+     for(var n=0;n<$scope.res.length;n++){
        for(var j=0;j<$scope.res[n].report.length;j++){
         $scope.poData.poNumber=$scope.res[n].report[j].poNumber
         $scope.poData.materialCode=$scope.res[n].report[j].materialCode
