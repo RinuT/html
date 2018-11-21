@@ -81,26 +81,25 @@ for (i = 0; i < acc.length; i++) {
           $scope.poData={}
           $scope.Pending=true
         
-        if($scope.PODataUnpaid.length==0){
-          $scope.fall=true
-          
-          }
-          $scope.loading=false
         }
-        else{
-          
-          $scope.loading=false
-        $scope.noData=true}
+
+       
       }
+       if($scope.PODataUnpaid.length==0){
+          $scope.noData=true
+          
+        }
+        $scope.loading=false
         
     }, function(response) {
       $scope.content = "Something went wrong";
       $scope.loading=false
   });
   }
- $scope.generateInvoice = function(id){
+ $scope.generateInvoice = function(id,batch){
   $scope.search=true
   myservice.xxx=id
+  myservice.batch=batch
  }
  
  $scope.navigate=function(url){
@@ -205,7 +204,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
           },
           "invDocNum": " "
         },
-        "batchCode": ""
+        "batchCode": myservice.xxx
       }
     var res = $http.post('http://ec2-35-173-231-185.compute-1.amazonaws.com:3000/api/generateInvoice',request).then(function successCallback(response){
                  $scope.update_response=response;
@@ -264,4 +263,5 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
         
     app.service('myservice', function() {
       this.xxx = "yyy";
+      this.batch=""
     });
