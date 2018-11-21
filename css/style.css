@@ -787,8 +787,9 @@ font-weight: bold;
 	background: #2f3343;
 	min-height: 450px;
 	width: 100%;
-	position: relative;
+	position: absolute;
 	color: #FFFFFF;
+	height: 100%;
 }
 .dashboard_drk .user {
 	background: url(../images/icon_user.png) no-repeat 30px 10px #252938;
@@ -808,6 +809,7 @@ font-weight: bold;
 	min-height: 450px;
 	width: 20%;
 	float: left;
+	height: 100%;
 }
 .dashboard_drk_right {
 	background: #3c3f4c;
@@ -815,6 +817,7 @@ font-weight: bold;
 	float: left;
 	padding: 10px 15px;
 	min-height: 500px;
+	height: 100%;
 }
 .dashboard_drk_right ul { margin: 10px 15px; }
 .dashboard_drk_right ul li { background: #252938; padding: 20px 20px; border-bottom: 1px solid #5b5e6a; margin-bottom: 10px; font-size: 16px;}
