@@ -22,7 +22,7 @@ ul, li, a, h1, h2, h3, p {
 	margin: 0px;
 }
 .container-fluid {
-	padding: 0px;
+	padding: 0px !important;
 }
 .header_bg {
 	background: url(../images/header_repeat.png) repeat-x center top #fff;
@@ -54,10 +54,11 @@ ul, li, a, h1, h2, h3, p {
 	z-index: 9999;
 	margin-top: 30px;
 	float: left;
+	padding-left:30px;
 }
 .banner_text_right {
 	float: right;
-	margin: 30px 0 0 100px;
+	margin: 30px 150px 0 0px;
 	position: relative;
 	z-index: 9999;
 	color: #fff;
@@ -711,7 +712,8 @@ ul, li, a, h1, h2, h3, p {
 	background: #E6E6E6;
 	min-height: 450px;
 	width: 100%;
-	position: relative;
+	position: absolute;
+	height: 100%;
 }
 .dashboard .user {
 	background: url(../images/icon_user.png) no-repeat 30px 10px #d5d6d8;
@@ -729,6 +731,7 @@ font-weight: bold;
 	min-height: 450px;
 	width: 20%;
 	float: left;
+	height: 100%;
 }
 .dashboard_right {
 	background: #E6E6E6;
