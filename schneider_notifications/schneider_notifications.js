@@ -87,6 +87,10 @@ for (i = 0; i < acc.length; i++) {
           }
           $scope.loading=false
         }
+        else{
+          
+          $scope.loading=false
+        $scope.noData=true}
       }
         
     }, function(response) {
@@ -116,6 +120,7 @@ app.controller('schneider_notificationsCtrl_success', ['$scope','myservice','$ht
     $scope.poData.diffDays=""
     $scope.poData.materialCode=""
     $scope.val="1"
+  $scope.noData=false
     $scope.Search=false
     $scope.Search1=false
     $scope.fialuier2=false
